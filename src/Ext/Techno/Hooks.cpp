@@ -747,7 +747,7 @@ DEFINE_HOOK(7090A8, TechnoClass_SelectFiringVoice, 0) {
 
 	// generic attack voice
 	if(idxVoice < 0 && pType->VoiceAttack.Count) {
-		unsigned int idxRandom = ScenarioClass::Instance->Random.Random();
+		unsigned int idxRandom = Randomizer::Global()->Random();
 		idxVoice = pType->VoiceAttack.GetItem(idxRandom % pType->VoiceAttack.Count);
 	}
 
